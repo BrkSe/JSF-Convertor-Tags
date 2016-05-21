@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+        "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:h="http://java.sun.com/jsf/html"
+      xmlns:f="http://java.sun.com/jsf/core">
+<h:head>
+    <title>Burak Kutbay JSF Dersleri</title>
+</h:head>
+<h:body>
+    <h2>JSF Converter Tag</h2>
+    <h2>www.burakkutbay.com</h2>
+
+    <h:panelGrid columns="2">
+        <h:outputText value="Pattern Kullanımı Örneği"/>
+        <h:outputText value="#{converter.tarihsaat}">
+            <f:convertDateTime pattern="dd/MM/yyyy"/>
+        </h:outputText>
+
+        <h:outputText value="DateStyle Kullanımı Örneği"/>
+        <h:outputText value="#{converter.tarihsaat}">
+            <f:convertDateTime dateStyle="default" type="both"/>
+        </h:outputText>
+
+        <h:outputText value="Locale Kullanımı Örneği"/>
+        <h:outputText value="#{converter.tarihsaat}">
+            <f:convertDateTime dateStyle="default" type="both" locale="en_US"/>
+        </h:outputText>
+
+        <h:outputText value="TimeZone Kullanımı Örneği"/>
+        <h:outputText value="#{converter.tarihsaat}">
+            <f:convertDateTime dateStyle="default" type="both" locale="en_US" timeZone="America/Chicago"/>
+        </h:outputText>
+
+
+    </h:panelGrid>
+</h:body>
+</html>
